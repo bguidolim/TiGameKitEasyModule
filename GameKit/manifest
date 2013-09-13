@@ -1,0 +1,18 @@
+#
+# this is your module manifest and used by Titanium
+# during compilation, packaging, distribution, etc.
+#
+version: 0.4
+apiversion: 2
+description: GameKit Module
+author: Bruno Guidolim
+license: Just for me
+copyright: Copyright (c) 2012 by Bruno Guidolim
+
+
+# these should not be edited
+name: gamekit
+moduleid: com.obigola.gamekit
+guid: b353ccbe-c942-46f7-b11e-9295a28c6271
+platform: iphone
+minsdk: 2.0.2.GA
