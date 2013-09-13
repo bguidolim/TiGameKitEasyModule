@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 45;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -28,9 +28,16 @@
 		24DE9E1211C5FE74003F90F6 /* ComObigolaGamekitModuleAssets.m in Sources */ = {isa = PBXBuildFile; fileRef = 24DE9E1011C5FE74003F90F6 /* ComObigolaGamekitModuleAssets.m */; };
 		AA747D9F0F9514B9006C5449 /* ComObigolaGamekit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* ComObigolaGamekit_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
-		AFEB6D2716548B2A008DE02F /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFEB6D2616548B2A008DE02F /* GameKit.framework */; };
-		AFEB6D3316549909008DE02F /* GameCenterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AFEB6D3116549909008DE02F /* GameCenterManager.h */; };
-		AFEB6D3416549909008DE02F /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFEB6D3216549909008DE02F /* GameCenterManager.m */; };
+		AF89B20E17E233D700147179 /* GameCenterManager.h in Headers */ = {isa = PBXBuildFile; fileRef = AF89B20817E233D700147179 /* GameCenterManager.h */; };
+		AF89B20F17E233D700147179 /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89B20917E233D700147179 /* GameCenterManager.m */; };
+		AF89B21017E233D700147179 /* NSDataAES256.h in Headers */ = {isa = PBXBuildFile; fileRef = AF89B20A17E233D700147179 /* NSDataAES256.h */; };
+		AF89B21117E233D700147179 /* NSDataAES256.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89B20B17E233D700147179 /* NSDataAES256.m */; };
+		AF89B21217E233D700147179 /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = AF89B20C17E233D700147179 /* Reachability.h */; };
+		AF89B21317E233D700147179 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = AF89B20D17E233D700147179 /* Reachability.m */; };
+		AF89B21517E2341000147179 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF89B21417E2341000147179 /* GameKit.framework */; };
+		AF89B23617E2526300147179 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF89B23517E2526300147179 /* SystemConfiguration.framework */; };
+		AF9B0DA417E254DE00CBA997 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9B0DA317E254DE00CBA997 /* CoreGraphics.framework */; };
+		AF9B0DA617E254E400CBA997 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF9B0DA517E254E400CBA997 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +46,7 @@
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
-			remoteInfo = gamekit;
+			remoteInfo = GameKit;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,10 +58,16 @@
 		24DE9E1011C5FE74003F90F6 /* ComObigolaGamekitModuleAssets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ComObigolaGamekitModuleAssets.m; path = Classes/ComObigolaGamekitModuleAssets.m; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* ComObigolaGamekit_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComObigolaGamekit_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		AF89B20517E233B300147179 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		AFEB6D2616548B2A008DE02F /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		AFEB6D3116549909008DE02F /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameCenterManager.h; path = Classes/GameCenterManager.h; sourceTree = "<group>"; };
-		AFEB6D3216549909008DE02F /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameCenterManager.m; path = Classes/GameCenterManager.m; sourceTree = "<group>"; };
+		AF89B20817E233D700147179 /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
+		AF89B20917E233D700147179 /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
+		AF89B20A17E233D700147179 /* NSDataAES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSDataAES256.h; sourceTree = "<group>"; };
+		AF89B20B17E233D700147179 /* NSDataAES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDataAES256.m; sourceTree = "<group>"; };
+		AF89B20C17E233D700147179 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		AF89B20D17E233D700147179 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		AF89B21417E2341000147179 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		AF89B23517E2526300147179 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AF9B0DA317E254DE00CBA997 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AF9B0DA517E254E400CBA997 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D2AAC07E0554694100DB518D /* libComObigolaGamekit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libComObigolaGamekit.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,7 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFEB6D2716548B2A008DE02F /* GameKit.framework in Frameworks */,
+				AF9B0DA617E254E400CBA997 /* UIKit.framework in Frameworks */,
+				AF9B0DA417E254DE00CBA997 /* CoreGraphics.framework in Frameworks */,
+				AF89B23617E2526300147179 /* SystemConfiguration.framework in Frameworks */,
+				AF89B21517E2341000147179 /* GameKit.framework in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -79,22 +95,25 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0867D691FE84028FC02AAC07 /* gamekit */ = {
+		0867D691FE84028FC02AAC07 /* GameKit */ = {
 			isa = PBXGroup;
 			children = (
+				AF89B20717E233D700147179 /* GameCenterLib */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
-			name = gamekit;
+			name = GameKit;
 			sourceTree = "<group>";
 		};
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				AF89B20517E233B300147179 /* SystemConfiguration.framework */,
-				AFEB6D2616548B2A008DE02F /* GameKit.framework */,
+				AF9B0DA517E254E400CBA997 /* UIKit.framework */,
+				AF9B0DA317E254DE00CBA997 /* CoreGraphics.framework */,
+				AF89B23517E2526300147179 /* SystemConfiguration.framework */,
+				AF89B21417E2341000147179 /* GameKit.framework */,
 				AACBBE490F95108600F1A2B1 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -107,8 +126,6 @@
 				24DE9E1011C5FE74003F90F6 /* ComObigolaGamekitModuleAssets.m */,
 				24DD6CF71134B3F500162E58 /* ComObigolaGamekitModule.h */,
 				24DD6CF81134B3F500162E58 /* ComObigolaGamekitModule.m */,
-				AFEB6D3116549909008DE02F /* GameCenterManager.h */,
-				AFEB6D3216549909008DE02F /* GameCenterManager.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -122,6 +139,19 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
+		AF89B20717E233D700147179 /* GameCenterLib */ = {
+			isa = PBXGroup;
+			children = (
+				AF89B20817E233D700147179 /* GameCenterManager.h */,
+				AF89B20917E233D700147179 /* GameCenterManager.m */,
+				AF89B20A17E233D700147179 /* NSDataAES256.h */,
+				AF89B20B17E233D700147179 /* NSDataAES256.m */,
+				AF89B20C17E233D700147179 /* Reachability.h */,
+				AF89B20D17E233D700147179 /* Reachability.m */,
+			);
+			path = GameCenterLib;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -132,16 +162,18 @@
 				AA747D9F0F9514B9006C5449 /* ComObigolaGamekit_Prefix.pch in Headers */,
 				24DD6CF91134B3F500162E58 /* ComObigolaGamekitModule.h in Headers */,
 				24DE9E1111C5FE74003F90F6 /* ComObigolaGamekitModuleAssets.h in Headers */,
-				AFEB6D3316549909008DE02F /* GameCenterManager.h in Headers */,
+				AF89B21217E233D700147179 /* Reachability.h in Headers */,
+				AF89B21017E233D700147179 /* NSDataAES256.h in Headers */,
+				AF89B20E17E233D700147179 /* GameCenterManager.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D2AAC07D0554694100DB518D /* gamekit */ = {
+		D2AAC07D0554694100DB518D /* GameKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "gamekit" */;
+			buildConfigurationList = 1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "GameKit" */;
 			buildPhases = (
 				D2AAC07A0554694100DB518D /* Headers */,
 				D2AAC07B0554694100DB518D /* Sources */,
@@ -151,8 +183,8 @@
 			);
 			dependencies = (
 			);
-			name = gamekit;
-			productName = gamekit;
+			name = GameKit;
+			productName = GameKit;
 			productReference = D2AAC07E0554694100DB518D /* libComObigolaGamekit.a */;
 			productType = "com.apple.product-type.library.static";
 		};
@@ -162,10 +194,9 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
 			};
-			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "gamekit" */;
-			compatibilityVersion = "Xcode 3.2";
+			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "GameKit" */;
+			compatibilityVersion = "Xcode 3.1";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -174,12 +205,12 @@
 				French,
 				German,
 			);
-			mainGroup = 0867D691FE84028FC02AAC07 /* gamekit */;
+			mainGroup = 0867D691FE84028FC02AAC07 /* GameKit */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D2AAC07D0554694100DB518D /* gamekit */,
+				D2AAC07D0554694100DB518D /* GameKit */,
 				24416B8111C4CA220047AFDD /* Build & Test */,
 			);
 		};
@@ -208,7 +239,9 @@
 			files = (
 				24DD6CFA1134B3F500162E58 /* ComObigolaGamekitModule.m in Sources */,
 				24DE9E1211C5FE74003F90F6 /* ComObigolaGamekitModuleAssets.m in Sources */,
-				AFEB6D3416549909008DE02F /* GameCenterManager.m in Sources */,
+				AF89B21117E233D700147179 /* NSDataAES256.m in Sources */,
+				AF89B20F17E233D700147179 /* GameCenterManager.m in Sources */,
+				AF89B21317E233D700147179 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +250,7 @@
 /* Begin PBXTargetDependency section */
 		24416B8511C4CA280047AFDD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D2AAC07D0554694100DB518D /* gamekit */;
+			target = D2AAC07D0554694100DB518D /* GameKit */;
 			targetProxy = 24416B8411C4CA280047AFDD /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -227,11 +260,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
+				ARCHS = "$(ARCHS_STANDARD)";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/ComObigolaGamekit.dst;
@@ -240,7 +269,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ComObigolaGamekit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
-				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -257,13 +285,14 @@
 					"-DDEBUG",
 					"-DTI_POST_1_2",
 				);
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ComObigolaGamekit;
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv6 armv7 armv7s i386";
 			};
 			name = Debug;
 		};
@@ -272,18 +301,13 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/ComObigolaGamekit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ComObigolaGamekit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
-				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -298,11 +322,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "-DTI_POST_1_2";
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = ComObigolaGamekit;
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "";
+				VALID_ARCHS = "armv6 armv7 armv7s i386";
 			};
 			name = Release;
 		};
@@ -310,11 +335,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DSTROOT = /tmp/ComObigolaGamekit.dst;
@@ -323,7 +343,6 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ComObigolaGamekit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
-				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -336,7 +355,6 @@
 				GCC_WARN_UNUSED_VARIABLE = NO;
 				INSTALL_PATH = /usr/local/lib;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				ONLY_ACTIVE_ARCH = YES;
 				OTHER_CFLAGS = (
 					"-DDEBUG",
 					"-DTI_POST_1_2",
@@ -356,18 +374,12 @@
 			baseConfigurationReference = 24DD6D1B1134B66800162E58 /* titanium.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				"ARCHS[sdk=iphoneos*]" = (
-					armv6,
-					armv7,
-				);
-				"ARCHS[sdk=iphonesimulator*]" = i386;
 				DSTROOT = /tmp/ComObigolaGamekit.dst;
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ComObigolaGamekit_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = "TI_VERSION=$(TI_VERSION)";
-				GCC_THUMB_SUPPORT = NO;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = NO;
@@ -396,7 +408,6 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_THUMB_SUPPORT = NO;
 				PRODUCT_NAME = "Build & test";
 			};
 			name = Debug;
@@ -407,7 +418,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_THUMB_SUPPORT = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				PRODUCT_NAME = "Build & test";
 				ZERO_LINK = NO;
 			};
@@ -416,7 +427,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "gamekit" */ = {
+		1DEB921E08733DC00010E9CD /* Build configuration list for PBXNativeTarget "GameKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB921F08733DC00010E9CD /* Debug */,
@@ -425,7 +436,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "gamekit" */ = {
+		1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "GameKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1DEB922308733DC00010E9CD /* Debug */,

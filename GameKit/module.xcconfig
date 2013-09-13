@@ -25,4 +25,4 @@
 //
 // IMPORTANT NOTE: always use $(inherited) in your overrides
 // 
-OTHER_LDFLAGS=$(inherited) -framework GameKit
+OTHER_LDFLAGS=$(inherited) -framework Foundation -framework GameKit -framework SystemConfiguration -framework CoreGraphics -framework UIKit

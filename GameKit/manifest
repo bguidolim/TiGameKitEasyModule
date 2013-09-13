@@ -4,15 +4,15 @@
 #
 version: 0.4
 apiversion: 2
-description: GameKit Module
+description: GameKit Easy Module
 author: Bruno Guidolim
-license: Just for me
-copyright: Copyright (c) 2012 by Bruno Guidolim
+license: Specify your license
+copyright: Copyright (c) 2013 by Your Company
 
 
 # these should not be edited
-name: gamekit
+name: GameKit
 moduleid: com.obigola.gamekit
 guid: b353ccbe-c942-46f7-b11e-9295a28c6271
 platform: iphone
-minsdk: 2.0.2.GA
+minsdk: 3.1.2.GA

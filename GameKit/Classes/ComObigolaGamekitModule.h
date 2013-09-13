@@ -6,18 +6,11 @@
  */
 #import "TiModule.h"
 #import <GameKit/GameKit.h>
-#import "GameCenterManager.h"
 
-@class GameCenterManager;
-
-@interface ComObigolaGamekitModule : TiModule <GKLeaderboardViewControllerDelegate, GKAchievementViewControllerDelegate, GameCenterManagerDelegate>
+@interface ComObigolaGamekitModule : TiModule <GKLeaderboardViewControllerDelegate, GKAchievementViewControllerDelegate>
 {
-    GameCenterManager* gameCenterManager;
-    NSString* currentLeaderBoard;
-	int64_t currentScore;
 }
 
-@property (nonatomic, retain) GameCenterManager *gameCenterManager;
 @property (nonatomic, assign) int64_t currentScore;
 @property (nonatomic, retain) NSString *currentLeaderBoard;
 
