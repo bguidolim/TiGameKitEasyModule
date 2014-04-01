@@ -36,7 +36,7 @@
 }
 
 -(void)showLeaderboard:(id)args {
-    NSString *identifier = [[(NSArray *)args objectAtIndex:0] stringValue];
+    NSString *identifier = (NSString *)[(NSArray *)args objectAtIndex:0];
     
     GKLocalPlayer *player;
     player = [GKLocalPlayer localPlayer];
@@ -48,14 +48,15 @@
     } else {
         GKLeaderboardViewController *leaderboardController = [[GKLeaderboardViewController alloc] init];
         if (leaderboardController != NULL) {
-            if (identifier)
+            if ([identifier length] > 0) {
                 leaderboardController.category = identifier;
-            else
+            } else {
                 leaderboardController.category = self.currentLeaderBoard;
+            }
             
             leaderboardController.timeScope = GKLeaderboardTimeScopeAllTime;
             leaderboardController.leaderboardDelegate = self;
-            
+    
             [[TiApp app] showModalController:leaderboardController animated:YES];
         }
     }
@@ -85,9 +86,81 @@
     GKLocalPlayer *player = [[GameCenterManager sharedManager] getPlayer];
     NSString *imageName = [NSString stringWithFormat:@"%@.png",player.playerID];
     
-    NSString* _return = [NSString stringWithFormat:@"{\"id\" : \"%@\", \"alias\" : \"%@\", \"photo\": \"%@\"}", player.playerID, player.alias, imageName];
+    NSString *_return = [NSString stringWithFormat:@"{\"id\" : \"%@\", \"alias\" : \"%@\", \"photo\": \"%@\"}", player.playerID, player.alias, imageName];
     
     return _return;
+}
+
+-(void)getLeaderboardScore:(id)args {
+    id successEvent         = [[args objectAtIndex:0] objectForKey:@"success"];
+    id errorEvent           = [[args objectAtIndex:0] objectForKey:@"error"];
+    id identifier           = [[args objectAtIndex:0] objectForKey:@"identifier"];
+    NSUInteger top           = (NSUInteger)[[[args objectAtIndex:0] objectForKey:@"topOf"] integerValue];
+    
+    if (top <= 0) {
+        top = 25;
+    } if (top > 100) {
+        top = 100;
+    }
+
+    GKLocalPlayer *player;
+    player = [GKLocalPlayer localPlayer];
+    
+    GKLeaderboard *leaderboard = [[GKLeaderboard alloc] init];
+    leaderboard.playerScope = GKLeaderboardPlayerScopeFriendsOnly;
+    leaderboard.timeScope = GKLeaderboardTimeScopeAllTime;
+    leaderboard.identifier = (NSString *)identifier;
+    leaderboard.category = (NSString *)identifier;
+    leaderboard.range = NSMakeRange(1, top);
+    
+    [leaderboard loadScoresWithCompletionHandler:^(NSArray *scores, NSError *error) {
+        if (error != nil) {
+            NSLog(@"[ERROR] %@", error.localizedDescription);
+            [self _fireEventToListener:@"error" withObject:nil listener:errorEvent thisObject:nil];
+        }
+        
+        NSMutableDictionary *returnDict = [[NSMutableDictionary alloc] init];
+        NSMutableArray *retrievePlayerIDs = [[NSMutableArray alloc] init];
+        
+        if (scores != nil) {
+            NSMutableArray *scoresArray = [[NSMutableArray alloc] init];
+        
+            for (GKScore *s in scores) {
+                [retrievePlayerIDs addObject:s.playerID];
+                
+                NSDictionary *dictScore =[NSDictionary dictionaryWithObjectsAndKeys:
+                                          s.playerID, @"playerID",
+                                          [NSNumber numberWithInt:s.value], @"scoreValue",
+                                          s.formattedValue, @"formattedValue",
+                                          [NSNumber numberWithInt:s.rank], @"rankPosition", nil];
+                
+                [scoresArray addObject:dictScore];
+            }
+            
+            [returnDict setObject:scoresArray forKey:@"scores"];
+            
+            NSDictionary *meDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                    [NSNumber numberWithInt:leaderboard.localPlayerScore.value], @"value",
+                                    leaderboard.localPlayerScore.formattedValue, @"formattedValue",
+                                    [NSNumber numberWithInt:leaderboard.localPlayerScore.rank], @"rankPosition", nil];
+            [returnDict setObject:meDict forKey:@"localPlayer"];
+            
+            NSMutableArray *playersInfo = [[NSMutableArray alloc] init];
+            [GKPlayer loadPlayersForIdentifiers:retrievePlayerIDs withCompletionHandler:^(NSArray *players, NSError *error) {
+                for (GKPlayer *p in players) {
+                    NSDictionary *playerDict = [NSDictionary dictionaryWithObjectsAndKeys:
+                                                p.playerID, @"playerID",
+                                                p.alias, @"alias",
+                                                p.displayName, @"displayName", nil];
+                    [playersInfo addObject:playerDict];
+                }
+                
+                [returnDict setObject:playersInfo forKey:@"playersInfo"];
+                
+                [self _fireEventToListener:@"success" withObject:returnDict listener:successEvent thisObject:nil];
+            }];
+        }
+    }];
 }
 
 #pragma GameKit Delegate

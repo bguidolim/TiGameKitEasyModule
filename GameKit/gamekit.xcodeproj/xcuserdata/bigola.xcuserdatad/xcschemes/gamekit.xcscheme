@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D2AAC07D0554694100DB518D"
                BuildableName = "libComObigolaGamekit.a"
-               BlueprintName = "gamekit"
-               ReferencedContainer = "container:gamekit.xcodeproj">
+               BlueprintName = "GameKit"
+               ReferencedContainer = "container:GameKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

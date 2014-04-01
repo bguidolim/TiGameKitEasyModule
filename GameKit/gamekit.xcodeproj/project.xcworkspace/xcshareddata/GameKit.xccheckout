@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1079AF36-D700-4B42-B91F-11E488E4AEAA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>GameKit</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>8D5FAC48-33EA-4B0D-9754-FBEC8A946373</key>
+		<string>https://bitbucket.org/bigola/gamekiteasymodule.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>GameKit/GameKit.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>8D5FAC48-33EA-4B0D-9754-FBEC8A946373</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://bitbucket.org/bigola/gamekiteasymodule.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>8D5FAC48-33EA-4B0D-9754-FBEC8A946373</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>8D5FAC48-33EA-4B0D-9754-FBEC8A946373</string>
+			<key>IDESourceControlWCCName</key>
+			<string>GameKitEasyModule</string>
+		</dict>
+	</array>
+</dict>
+</plist>

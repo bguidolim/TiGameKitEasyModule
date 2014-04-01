@@ -250,6 +250,7 @@ static GameCenterManager *sharedManager = nil;
             if([[GameCenterManager sharedManager] isInternetAvailable]) {
                 GKAchievement *achievement = [[[GKAchievement alloc] initWithIdentifier:identifier] autorelease];
                 achievement.percentComplete = percentComplete;
+                achievement.showsCompletionBanner = YES;
                 
                 NSLog(@"[INFO] Sending %f to Achievement %@",percentComplete,identifier);
                 
@@ -444,11 +445,11 @@ static GameCenterManager *sharedManager = nil;
                 if(identifier != nil) {
                     GKAchievement *achievement = [[[GKAchievement alloc] initWithIdentifier:identifier] autorelease];
                     achievement.percentComplete = percentComplete;
+                    achievement.showsCompletionBanner = YES;
                     [achievement reportAchievementWithCompletionHandler:^(NSError *error) {
                         if(error == nil) {
                             [[GameCenterManager sharedManager] reportSavedScoresAndAchievements];
-                        }
-                        else {
+                        } else {
                             [[GameCenterManager sharedManager] saveAchievementToReportLater:achievement.identifier percentComplete:achievement.percentComplete];
                         }
                     }];
