@@ -1,0 +1,60 @@
+<h1>GameKit Easy Module</h1>
+<h2>Description</h2>
+<p>This is a module that integrates Apple's Game Kit API. Currently Leader Boards and Achievements are supported.</p>
+<h2>Getting Started</h2>
+<p>View the <a href="http://docs.appcelerator.com/titanium/2.0/#!/guide/Using_Titanium_Modules">Using Titanium Modules</a> document for instructions on getting
+started with using this module in your application.</p>
+<h2>Accessing the Ti.GameKit Module</h2>
+<p>To access this module from JavaScript, you would do the following:</p>
+<pre>var GameKit = require('com.obigola.gamekit');</pre>
+<h2>Methods</h2>
+<h3>void initGameCenter(<i>callback</i> success)</h3>
+<p>Checks if GameKit is available on the current device and connect to Game Center server. Devices must be running iOS 4.1 or later.</p>
+<p>Accepts a single argument:</p>
+<ul>
+<li><i>callback</i> success: Use it if you want to do something after the player was authenticated.<br>
+	This argument is <b>optional</b>.
+</li>
+</ul>
+<h3>void submitScore(<i>string</i> identifier, <i>string</i> score)</h3>
+<p>Saves a score for the current user to the specified LeaderBoard</p>
+<p>Accepts two arguments:</p>
+<ul>
+<li><i>string</i> identifier: The identifier for the LeaderBoard, as set up in your iTunesConnect for this app.</li>
+<li><i>string</i> score: The score the user accomplished.</li>
+</ul>
+<h3>void showLeaderboard(<i>string</i> identifier)</h3>
+<p>Shows a particular LeaderBoard to the user.</p>
+<p>Accepts a single argument:</p>
+<ul>
+<li>string identifier: The identifier for the LeaderBoard, as set up in your iTunesConnect for this app.<br>
+	This argument is <b>optional</b>, if you not set, the module shows the last LeaderBoard called on submitScore()
+</li>
+</ul>
+<h3>void submitAchievement(<i>string</i> identifier, <i>string</i> percentageEarned)</h3>
+<p>Saves a score for the current user to the specified LeaderBoard</p>
+<p>Accepts two arguments:</p>
+<ul>
+<li><i>string</i> identifier: The identifier you set up in your iTunes Connect account for this app.</li>
+<li><i>string</i> percentageEarned: A float from 0 to 100 describing how close the user is to completing the achievement. Once reported, achievements cannot be downgraded (so if a user completes 50% of an achievement, you cannot kick them back to only 10% completed).</li>
+</ul>
+<h3>void resetAchievements()</h3>
+<p>Reset all users achievements from the Game Center server.
+<h3>string getPlayerInfo()</h3>
+<p>Return a stringfied JSON with:
+<ul>
+<li>Player ID</li>
+<li>Alias</li>
+<li>Photo (Photo is just "Player ID"+".png", you'll need to use Titanium.Filesystem API to access the image. See example file.)</li>
+</ul>
+<p>To parse this string, use JSON.parse() function.
+<h2>Usage</h2>
+<p>See example.</p>
+<h2>Author</h2>
+<p>Bruno Guidolim</p>
+<h2>Module History</h2>
+<p>View the <a href="changelog.html">change log</a> for this module.</p>
+<h2>Feedback and Support</h2>
+<p>Please direct all questions, feedback and concerns to <a href="mailto:bruno@guidolim.com?subject=GameKit%20Easy%20Module">bruno@guidolim.com</a>.</p>
+<h2>License</h2>
+<p>Copyright(c) 2013 by Bruno Guidolim. All Rights Reserved. Please see the LICENSE file included in the distribution for further details.</p>

@@ -35,7 +35,7 @@
 - (void)syncGameCenter;
 
 // Saves score locally and reports it to Game Center. If error occurs, score is saved to be submitted later.
-- (void)saveAndReportScore:(int)score leaderboard:(NSString *)identifier;
+- (void)saveAndReportScore:(NSInteger)score leaderboard:(NSString *)identifier;
 
 // Saves achievement locally and reports it to Game Center. If error occurs, achievement is saved to be submitted later.
 - (void)saveAndReportAchievement:(NSString *)identifier percentComplete:(double)percentComplete;

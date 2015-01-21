@@ -132,7 +132,7 @@ static GameCenterManager *sharedManager = nil;
                             if(savedHighScore != nil) {
                                 savedHighScoreValue = [savedHighScore intValue];
                             }
-                            [playerDict setObject:[NSNumber numberWithInt:MAX(leaderboardRequest.localPlayerScore.value, savedHighScoreValue)] forKey:leaderboardRequest.localPlayerScore.category];
+                            [playerDict setObject:[NSNumber numberWithInteger:MAX(leaderboardRequest.localPlayerScore.value, savedHighScoreValue)] forKey:leaderboardRequest.localPlayerScore.category];
                             [plistDict setObject:playerDict forKey:[[GameCenterManager sharedManager] localPlayerId]];
                             NSData *saveData = [[NSKeyedArchiver archivedDataWithRootObject:plistDict] encryptedWithKey:kGameCenterManagerKey];
                             [saveData writeToFile:kGameCenterManagerDataPath atomically:YES];
@@ -174,7 +174,7 @@ static GameCenterManager *sharedManager = nil;
     }
 }
 
-- (void)saveAndReportScore:(int)score leaderboard:(NSString *)identifier {
+- (void)saveAndReportScore:(NSInteger)score leaderboard:(NSString *)identifier {
     NSData *gameCenterManagerData = [[NSData dataWithContentsOfFile:kGameCenterManagerDataPath] decryptedWithKey:kGameCenterManagerKey];
     NSMutableDictionary *plistDict = [NSKeyedUnarchiver unarchiveObjectWithData:gameCenterManagerData];
     NSMutableDictionary *playerDict = [plistDict objectForKey:[[GameCenterManager sharedManager] localPlayerId]];
@@ -187,7 +187,7 @@ static GameCenterManager *sharedManager = nil;
     }
     int savedHighScoreValue = [savedHighScore intValue];
     if(score > savedHighScoreValue) {
-        [playerDict setObject:[NSNumber numberWithInt:score] forKey:identifier];
+        [playerDict setObject:[NSNumber numberWithInteger:score] forKey:identifier];
         [plistDict setObject:playerDict forKey:[[GameCenterManager sharedManager] localPlayerId]];
         NSData *saveData = [[NSKeyedArchiver archivedDataWithRootObject:plistDict] encryptedWithKey:kGameCenterManagerKey];
         [saveData writeToFile:kGameCenterManagerDataPath atomically:YES];
@@ -199,7 +199,7 @@ static GameCenterManager *sharedManager = nil;
                 GKScore *gkScore = [[[GKScore alloc] initWithCategory:identifier] autorelease];
                 gkScore.value = score;
                 
-                NSLog(@"[INFO] Sending %d to Leaderboard %@",score,identifier);
+                NSLog(@"[INFO] Sending %ld to Leaderboard %@",(long)score,identifier);
                 
                 [gkScore reportScoreWithCompletionHandler:^(NSError *error) {
                     NSDictionary *dict = nil;
