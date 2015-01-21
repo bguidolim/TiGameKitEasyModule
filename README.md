@@ -97,7 +97,7 @@ See example.
 
 ## Author
 
-[@bguidolim](http://twitter.com/bguidolim).
+[@bguidolim](http://twitter.com/bguidolim)
 
 ## Module History
 
