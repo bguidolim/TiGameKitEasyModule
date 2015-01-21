@@ -97,12 +97,8 @@ See example.
 
 ## Author
 
-Bruno Guidolim
+[@bguidolim](http://twitter.com/bguidolim).
 
 ## Module History
 
 View the [change log](CHANGELOG.md) for this module.
-
-## Feedback and Support
-
-Please direct all questions, feedback and concerns to [bruno@guidolim.com](mailto:bruno@guidolim.com?subject=GameKit%20Easy%20Module) or [@bguidolim](http://twitter.com/bguidolim).
