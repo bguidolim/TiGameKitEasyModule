@@ -99,6 +99,9 @@ See example.
 
 [@bguidolim](http://twitter.com/bguidolim)
 
+## Special Thanks
+[Nihal Ahmed](https://github.com/nihalahmed/GameCenterManager)
+
 ## Module History
 
 View the [change log](CHANGELOG.md) for this module.
