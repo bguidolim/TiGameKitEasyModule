@@ -1,7 +1,7 @@
 # Change Log
 
 ##0.7	
-64-bit Support
+* 64-bit Support
 ##0.6
 * Added method getLeaderboardScore() to get scores directly from Game Center server;
 ##0.5
