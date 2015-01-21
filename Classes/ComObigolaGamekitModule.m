@@ -103,8 +103,8 @@
         top = 100;
     }
 
-    GKLocalPlayer *player;
-    player = [GKLocalPlayer localPlayer];
+//    GKLocalPlayer *player;
+//    player = [GKLocalPlayer localPlayer];
     
     GKLeaderboard *leaderboard = [[GKLeaderboard alloc] init];
     leaderboard.playerScope = GKLeaderboardPlayerScopeFriendsOnly;
@@ -130,9 +130,9 @@
                 
                 NSDictionary *dictScore =[NSDictionary dictionaryWithObjectsAndKeys:
                                           s.playerID, @"playerID",
-                                          [NSNumber numberWithInt:s.value], @"scoreValue",
+                                          [NSNumber numberWithInteger:s.value], @"scoreValue",
                                           s.formattedValue, @"formattedValue",
-                                          [NSNumber numberWithInt:s.rank], @"rankPosition", nil];
+                                          [NSNumber numberWithInteger:s.rank], @"rankPosition", nil];
                 
                 [scoresArray addObject:dictScore];
             }
@@ -140,9 +140,9 @@
             [returnDict setObject:scoresArray forKey:@"scores"];
             
             NSDictionary *meDict = [NSDictionary dictionaryWithObjectsAndKeys:
-                                    [NSNumber numberWithInt:leaderboard.localPlayerScore.value], @"value",
+                                    [NSNumber numberWithInteger:leaderboard.localPlayerScore.value], @"value",
                                     leaderboard.localPlayerScore.formattedValue, @"formattedValue",
-                                    [NSNumber numberWithInt:leaderboard.localPlayerScore.rank], @"rankPosition", nil];
+                                    [NSNumber numberWithInteger:leaderboard.localPlayerScore.rank], @"rankPosition", nil];
             [returnDict setObject:meDict forKey:@"localPlayer"];
             
             NSMutableArray *playersInfo = [[NSMutableArray alloc] init];
