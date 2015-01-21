@@ -10,6 +10,10 @@ Getting Started
 View the [Using Titanium Modules](http://docs.appcelerator.com/titanium/2.0/#!/guide/Using_Titanium_Modules) document for instructions on getting
 started with using this module in your application.
 
+Download
+===
+Download the compiled release [here](https://github.com/bguidolim/TiGameKitEasyModule/tree/master/Dist) or install from gitTio    [![gitTio](http://gitt.io/badge.png)](http://gitt.io/component/com.obigola.gamekit)
+
 Accessing the Ti.GameKit Module
 ===
 To access this module from JavaScript, you would do the following:
