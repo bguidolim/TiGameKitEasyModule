@@ -13,9 +13,9 @@ started with using this module in your application.
 Accessing the Ti.GameKit Module
 ===
 To access this module from JavaScript, you would do the following:
-
-<pre>var GameKit = require('com.obigola.gamekit');</pre>
-
+```javascript
+var GameKit = require('com.obigola.gamekit');
+```
 Methods
 ===
 ### void initGameCenter({ success: &lt;successCallback&gt;, error: &lt;errorCallback&gt; })
@@ -24,13 +24,9 @@ Checks if GameKit is available on the current device and connect to Game Center 
 
 Accepts one object with two properties:
 
-*   _callback_ success: Use it if you want to do something after the player was authenticated.
+*   _callback_ success: Use it if you want to do something after the player was authenticated. This property is **optional**.
 
-    	This property is **optional**.
-
-*   _callback_ error: Use it if you want to do something after the player cannot be authenticated.
-
-    	This property is **optional**.
+*   _callback_ error: Use it if you want to do something after the player cannot be authenticated. This property is **optional**.
 
 ### void submitScore(_string_ identifier, _string_ score)
 
@@ -47,9 +43,7 @@ Shows a particular LeaderBoard to the user.
 
 Accepts a single argument:
 
-*   string identifier: The identifier for the LeaderBoard, as set up in your iTunesConnect for this app.
-
-    	This argument is **optional**, if you not set, the module shows the last LeaderBoard called on submitScore()
+*   string identifier: The identifier for the LeaderBoard, as set up in your iTunesConnect for this app. This argument is **optional**, if you not set, the module shows the last LeaderBoard called on submitScore()
 
 ### void submitAchievement(_string_ identifier, _string_ percentageEarned)
 
@@ -85,17 +79,13 @@ Accepts one object with four properties:
 
 *   _string_ identifier: Set which Leaderboard you want to get scores.
 
-*   _int_ topOf: Set users limit that you want to get from Leaderboard, like "Top 15". It's limited to 100. Default value is 25.
-
-    	This property is **optional**.
+*   _int_ topOf: Set users limit that you want to get from Leaderboard, like "Top 15". It's limited to 100. Default value is 25. This property is **optional**.
 
 *   _callback_ success(response): Use it to manage scores.
 
-        *   _object_ response: { _object_ localPlayer, _array_ playersInfo, _array_ scores}
+       *   _object_ response: { _object_ localPlayer, _array_ playersInfo, _array_ scores}
 
-*   _callback_ error: Use it if you want to do something after the scores cannot be returned.
-
-    	This property is **optional**.
+*   _callback_ error: Use it if you want to do something after the scores cannot be returned. This property is **optional**.
 
 ## Usage
 
@@ -107,12 +97,8 @@ Bruno Guidolim
 
 ## Module History
 
-View the [change log](changelog.html) for this module.
+View the [change log](CHANGELOG.md) for this module.
 
 ## Feedback and Support
 
 Please direct all questions, feedback and concerns to [bruno@guidolim.com](mailto:bruno@guidolim.com?subject=GameKit%20Easy%20Module).
-
-## License
-
-Copyright(c) 2014 by Bruno Guidolim. All Rights Reserved.
